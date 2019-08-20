@@ -39,6 +39,44 @@
     
     
         
+            <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+        
     
 
 
@@ -129,8 +167,15 @@
         </header>
 
         <div class="post-content">
-            <a href="/2019/08/06/d/avatar.jpeg" title="Foto">Foto</a>
-<p>Hola</p>
+            <p>Un tanque cilíndrico con $5 m$ de radio se está llenando con agua a razón de  $3 \frac{cm^3}{min} $ ¿Qué tan rápido se incrementa la altura del agua?</p>
+<p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$</p>
+<p>When $a \ne 0$, there are two solutions to (ax^2 + bx + c = 0) and they are<br>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p>
+<p>$$(\nabla_X Y)^k = X^i (\nabla_i Y)^k = X^i \left( \frac{\partial Y^k}{\partial x^i} + \Gamma_{im}^k Y^m \right)$$</p>
+<p>$$\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N (x_i -\mu)^2}$$</p>
+<p>$$\vec{\nabla} \times \vec{F} = \left( \frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) \mathbf{i} + \left( \frac{\partial F_x}{\partial z} - \frac{\partial F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial F_y}{\partial x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k}$$</p>
+<p>$$\int_D ({\nabla\cdot} F)dV=\int_{\partial D} F\cdot ndS$$</p>
+<p>$$f(a) = \frac{1}{2\pi i} \oint\frac{f(z)}{z-a}dz$$</p>
+<p>$$\cos(θ+φ)=\cos(θ)\cos(φ)−\sin(θ)\sin(φ)$$<br>$${a\over b}\Big|_{0}$$</p>
 
         </div>
 
